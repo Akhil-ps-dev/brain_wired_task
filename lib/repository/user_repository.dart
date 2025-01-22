@@ -17,7 +17,7 @@ class UserRepository {
       if (response.statusCode == 200) {
         final body = jsonDecode(response.body);
         // return UserModel.fromJson(body);
-        return UserModel.fromJson(body[0]);
+        return  UserModel.fromJson(body[0]);
       } else {
         throw Exception(
             'Failed to load user details. Status code: ${response.statusCode}');
